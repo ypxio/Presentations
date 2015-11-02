@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('../fonts/ProximaNova-Black.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../fonts/ProximaNova-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-BoldItalic';
+    src: url('../fonts/ProximaNova-BoldIt.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Extrabold';
+    src: url('../fonts/ProximaNova-Extrabold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Light';
+    src: url('../assets/fonts/ProximaNova-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-LightItalic';
+    src: url('../assets/fonts/ProximaNova-LightItalic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-RegItalic';
+    src: url('../assets/fonts/ProximaNova-RegItalic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url('../assets/fonts/ProximaNova-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-RegularItalic';
+    src: url('../assets/fonts/ProximaNova-RegularItalic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Semibold';
+    src: url('../assets/fonts/ProximaNova-Semibold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-SemiboldItalic';
+    src: url('../assets/fonts/ProximaNova-SemiboldItalic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
