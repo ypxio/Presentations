@@ -54,6 +54,8 @@ module.exports = function(grunt) {
     clean: {
       dist: 'dist'
     },
+
+
     watch: {
       dist: {
         files: ['dist/**'],
@@ -76,6 +78,8 @@ module.exports = function(grunt) {
         tasks: ['template']
       }
     },
+
+    
     mkcouchdb: {
       app: require('./couchapp.json')
     },
