@@ -12,522 +12,398 @@ background-image: url(img/cover.jpg)
 
 Malang Front End Developer Group
 
-### Introduction to CSS Methodologies
+# Introduction to CSS Methodologiess
 
 by @yuripertamax
 
 ---
-class: bg-flat-light
 
-# Agendas
+class: page
 
-0. Awal
-1. Latar Belakang
-2. Rumusan Masalah
-3. Tujuan dan Manfaat
-4. Dasar Teori
-5. Analisis dan Perancangan
-6. Implementasi
-7. Kesimpulan dan Saran
+# Agenda
 
----
-class: center, middle, bg-flat-dark, section
-
-# Awal
+1. What is CSS Methodologies?
+2. Standard CSS Guidelines
+3. Most well known CSS Methodologies
+4. Vendor Spesific Standard CSS Guidelines
 
 ---
-class: center, middle, bg-flat-light
 
-# Penyusun / Presenter
+class: page
 
-Nama: Yuri Citra Pratama
+# What is CSS Methodologies?
 
-NIM: 0910680068
+CSS methodologies are formal, documented systems for authoring CSS in a way that allows us to develop, maintain and scale the front-end as a set of small, isolated modules
 
-Program Studi: Informatika/Ilmu Komputer
-
 ---
-class: center, middle, bg-flat-light
+
+class: page
 
-# Judul Tugas Akhir
+# What is CSS Methodologies (.cont)
 
-Rancang Bangun Sustem Informasi Manajemen Restaurant dan Pemesanan Terintegrasi dengan Menggunakan Metode Pendekatan Prototype
+Methodologies for scalable maintainable frontend code, especially CSS
 
 ---
-class: center, middle, bg-flat-light
 
-# Online Akses
+class: page
 
-Demo Aplikasi: [demo.apptizer.yuripertamax.me]()
+# What is CSS Methodologies (.cont)
 
-Slide Presentasi: [slide.yuripertamax.me/apptizer-sidang/dist](http://slide.yuripertamax.me/apptizer-sidang/dist)
+Each CSS methodology offers a slightly different set of solutions to the CSS scalability/maintainability problem. A CSS methodology will often define guidelines for:
 
-Dokumen Skripsi: [buku.apptizer.yuripertamax.me]()
+* CSS and HTML best practices
+* Class- and ID-naming conventions
+* Ordering and grouping of CSS style rules
+* Code formatting
 
 ---
-class: center, middle
 
-.center[![Default-aligned image](img/rpl.png)]
+class: page
 
----
-class: center, middle
+# What is CSS Methodologies (.cont)
 
-.center[![Default-aligned image](img/filkom.png)]
+There is no __best__ CSS methodology. They are only different __approaches__ to work better for different individuals/teams/projects.
 
 ---
-class: center, middle, bg-flat-dark, section
-
-# Latar Belakang
 
----
-class: center, middle, bg-flat-light, left
+class: page
 
-# Masalah #1
+# Why we use it?
 
-Seringkali terjadi kesalahan dalam pemesanan menu makanan oleh pelanggan karena pelayan salah dalam mendeskripsikan dan menulis jumlah menu.
+We will be easily to design and iterate on your web design projects, regardless of scale and complexity.
 
 ---
-class: center, middle, bg-flat-light, left
-
-# Masalah #2
-
-Kurangnya informasi mengenai menu spesial, menu paling laris, menu paling favorit, dan menu terbaru yang ada di restoran.
 
----
-class: center, middle, bg-flat-light, left
+class: page
 
-# Masalah #3
+# Standard CSS Guidelines
 
-Kurangnya informasi tentang detail setiap menu mulai dari foto menu, bahan yang membentuk menu tersebut sehingga pelanggan kesulitan dalam memilih menu yang pas.
+* http://cssguidelin.es/
+* https://github.com/necolas/idiomatic-css
 
 ---
-class: center, middle, bg-flat-light, left
-
-# Masalah #4
 
-Tidak adanya sinkronisasi antara jumlah stok bahan dengan menu yang tersedia serta seringnya perubahan harga tiap menu sehingga terkadang menu yang tertulis pada buku menu konvensional sifatnya kurang real.
+class: page
 
----
-class: center, middle, bg-flat-light, left
+# Most well known CSS Methodologies
 
-# Masalah #5
+* BEM
+* SMACSS
+* OOCSS
+* Mobile First (!)
 
-Keterlambatan atau kurang teraturnya urutan pemesanan yang mengakibatkan para pelanggan menunggu lama dan pada akhirnya ada kemungkinan tidak akan kembali lagi ke restoran tersebut.
-
 ---
-class: center, middle, bg-flat-light, left
-
-# Masalah #6
 
-Belum adanya rekap laporan menyeluruh mengenai data pelanggan dan pemesanan restoran serta manajerial restoran untuk manajer hingga owner sehingga kurang bisa menganalisa pertumbuhan serta strategi dan rencana kedepan untuk restoran tersebut.
+class: page
 
----
-class: center, middle, bg-flat-dark, section
+# Other CSS Methodologies
 
-# Rumusan Masalah
+* Atomic
+* Docssa
+* Systematic
+* Suit CSS
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Rumusan Masalah #1
+class: page-cover, center, middle
 
-Bagaimana proses perancangan aplikasi Apptizer?
+# BEM (Block, Element, Modifier)
 
 ---
-class: center, middle, bg-flat-light, left
-
-# Rumusan Masalah #2
 
-Bagaimana implementasi aplikasi Apptizer dapat menangani proses transaksi pada pelanggan, terutama pada proses pemesanan menu sehingga diharapkan mampu membantu permasalahan yang ada?
+class: page
 
----
-class: center, middle, bg-flat-light, left
+# BEM (Block, Element, Modifier)
 
-# Rumusan Masalah #3
+BEM stands for Block Element Modifier and originated at Yandex. It provides a rather strict way to arrange your CSS classes into independent modules
 
-Bagaimana implementasi aplikasi Apptizer dapat menangani proses manajerial pada restoran sehingga diharapkan mampu membantu permasalahan yang kerap terjadi dalam sistem konvensional restoran sebelumnya?
-
 ---
-class: center, middle, bg-flat-light, left
 
-# Rumusan Masalah #4
+class: page
 
-Bagaimana skenario dan proses pengujian yang akan dilakukan dan diterapkan pada perangkat lunak Apptizer sehingga didapat hasil pengujian sesuai yang diharapkan?
+# BEM (Block, Element, Modifier)
 
----
-class: center, middle, bg-flat-dark, section
+There are a few variations on the idea but the most common one looks like this:
 
-# Tujuan dan Manfaat
+```css
+.block {}
+.block__element {}
+.block--modifier {}
+.block__element--modifier {}
+```
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Tujuan #1
+class: page
 
-Untuk mengetahui dan menganalisis bagaimana aplikasi Apptizer dapat menangani proses transaksi pada pelanggan, terutama pada proses pemesanan sehingga diharapkan mampu membantu permasalahan yang ada sebelumnya
+# BEM - Block
 
----
-class: center, middle, bg-flat-light, left
-
-# Tujuan #2
+A __Block__ represents an object in your website. For example:
 
-Untuk mengetahui dan menganalisis bagaimana aplikasi Apptizer dapat menangani proses manajerial pada restoran sehingga diharapkan mampu membantu permasalahan yang kerap terjadi dalam sistem konvensional restoran sebelumnya.
+* a person
+* a login form
+* a menu
+* a search form
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Manfaat Bagi Perusahaan
+class: page
 
-Hasil pengembangan aplikasi Apptizer ini diharapkan dapat membantu beberapa permasalahan yang kerap kali terjadi pada sistem konvensional restoran pada umumnya yang telah tersebut sebelumnya sehingga diharapkan pihak restoran menignkatkan efisiensi serta memperoleh kemudahan dalam mengakses dan menganalisa data terkait dengan restorannya.
-
----
-class: center, middle, bg-flat-light, left
+# BEM - Block (.cont)
 
-# Manfaat Bagi Restaurant
+Standalone entity that is meaningful on its own.
 
-Hasil pengembangan aplikasi Apptizer ini diharapkan dapat memberikan pengalaman baru dalam melakukan transaksi pada restoran, sejak pemilihan menu hingga proses pembayaran, sehingga diharapkan dapat membantu menambah tingkat kepuasan pelanggan yang berdampak positif bagi kedepannya, misalnya munculnya keinginan pada pelanggan untuk kembali ke restoran tersebut.
+example: `header`, `container`, `menu`, `checkbox`, `input`
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Manfaat Bagi Penyusun
+class: page
 
-Proses pengembangan aplikasi Apptizer ini diharapkan dapat menambah wawasan keilmuan, terutama terkait hal teknis terkait proses pengembangan aplikasi berikut metodenya serta dapat pula mengetahui manfaat ilmu yang selama ini didapat bisa diimplementasikan di dunia nyata.
+# BEM - Element
 
----
-class: center, middle, bg-flat-dark, section
+An __Element__ is a component within the block that performs a particular function. It should only make sense in the context of its block. For example:
 
-# Dasar Teori
+* a hand
+* a login button
+* a menu item
+* a search input field
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Dasar Teori
+class: page
 
-- Konsep RPL (Rekayasa Perangkat Lunak)
-- Konsep Pengembangan Perangkat Lunak dengan Pendekatan Prototype
-- Konsep UML (Unified Modelling Language)
-- Konsep Teknis Implementasi (Programming Language, Server, Framework Concept, dll)
-- Konsep Pengujian Perangkat Lunak (White Box, Black Box)
+# BEM - Element (.cont)
 
----
-class: center, middle, bg-flat-dark, section
+Parts of a block and have no standalone meaning. They are semantically tied to its block.
 
-# Protoype Software Development Cycle
+example: `menu item`, `list item`, `checkbox caption`, `header title`
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Protoype Software Development Cycle
+class: page
 
-Prototyping adalah pengembangan yang cepat dan pengujian terhadap model kerja (prototipe) dari aplikasi baru melalui proses interaksi dan berulang-ulang yang biasa digunakan ahli sistem informasi dan ahli bisnis. Prototyping disebut juga desain aplikasi cepat (rapid application design/RAD) karena menyederhanakan dan mempercepat desain sistem (O'Brien, 2005).
-
-Sebagian user kesulitan mengungkapkan keinginannya untuk mendapatkan aplikasi yang sesuai dengan kebutuhannya. Kesulitan ini yang perlu diselesaikan oleh analis dengan memahami kebutuhan user dan menerjemahkannya ke dalam bentuk model (prototipe). Model ini selanjutnya diperbaiki secara terus menerus sampai sesuai dengan kebutuhan user.
-
----
-class: center, middle, bg-flat-light, left
+# BEM - Modifier
 
-# Protoype Software Development Cycle
+A Modifier is how we represent the variations of a block. For example:
 
-.center[![Default-aligned image](img/prototype.jpg)]
+* a female person
+* a condensed login form (e.g. we’re hiding the labels in one version)
+* a menu modified to look differently for a footer or sitemap
+* a search input field with a particular button style
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Tahapan Prototype
+class: page
 
-1. Pengumpulan Kebutuhan
-2. Membangun Prototype
-3. Evaluasi Prototype
-4. Mengkodekan Sistem
-5. Menguji Sistem
-6. Evaluasi Sistem
-7. Menggunakan Sistem
+# BEM - Modifier (.cont)
 
----
-class: center, middle, bg-flat-light, left
-
-# Tahapan Prototype #1 - Pengumpulan Kebutuhan
+Flags on blocks or elements. Use them to change appearance or behavior.
 
-Pelanggan dan developer bersama-sama mendefinisikan format seluruh perangkat lunak, mengidentifikasikan semua kebutuhan, dan garis besar sistem yang akan dibuat.
+example: `disabled`, `highlighted`, `checked`, `fixed`, `size big`, ``color yellow`
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Tahapan Prototype #2 - Membangun Kebutuhan
+class: page
 
-Membangun prototype dengan membuat perancangan sementara yang berfokus pada penyajian kepada pelanggan (misalnya dengan membuat input dan format output).
+# BEM Example
 
----
-class: center, middle, bg-flat-light, left
+In the example of our menu, the class names could look like this:
 
-# Tahapan Prototype #3 - Evaluasi Prototype
+```css
+.menu {}
+.menu__item {}
+.menu__item--featured {}
+.menu--footer {}
+```
 
-Evaluasi ini dilakukan oleh pelanggan apakah prototype yang sudah dibangun sudah sesuai dengan keinginan pelanggan. Jika sudah sesuai maka langkah 4 akan diambil. Jika tidak prototype direvisi dengan mengulangi langkah 1, 2, dan 3.
-
 ---
-class: center, middle, bg-flat-light, left
-
-# Tahapan Prototype #4 - Mengkodekan Sistem
 
-Dalam tahap ini prototype yang sudah disepakati diterjemahkan ke dalam bahasa pemrograman yang sesuai.
+class: page
 
----
-class: center, middle, bg-flat-light, left
-
-# Tahapan Prototype #5 - Menguji Sistem
+# BEM Advantages and Guidance
 
-Setelah sistem sudah menjadi suatu perangkat lunak yang siap pakai, harus dites dahulu sebelum digunakan. Pengujian ini dilakukan dengan White Box, Black Box, Basis Path, Pengujian Arsitektur dan lain-lain.
+* It is applicable to all projects, big and small
+* It avoids nesting
+* It helps you rediscover the power of classes
+* Makes working on larger sites easier
+* The BEM methodology encapsulates your code for reuse
+* Works well with frameworks with a component-based focus
+* Quick way to deliver prototypes
+* Makes you think twice
+* Don’t get too strict with it
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Tahapan Prototype #6- Evaluasi Sistem
+class: page-cover, center, middle
 
-Pelanggan mengevaluasi apakah sistem yang sudah jadi sudah sesuai dengan yang diharapkan. Jika ya, langkah 7 dilakukan, jika tidak, ulangi langkah 4 dan 5.
+# SMACSS (Scalable Modular Architecture CSS)
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Tahapan Prototype #7 - Menggunakan Sistem
+class: page
 
-Perangkat lunak yang telah diuji dan diterima pelanggan siap untuk digunakan.
+# What is SMACSS?
 
----
-class: center, middle, bg-flat-dark, section
+SMACSS is a CSS framework by Jonathan Snook. On the SMACSS website, he says it is more like a “style guide” than a rigid CSS framework. 
 
-# Analisis dan Perancangan Sistem
-
 ---
-class: center, middle, bg-flat-light, left
-
-# Arsitektur Sistem Restoran Konvensional
 
-.center[![Default-aligned image](img/konvensional.png)]
+class: page
 
+# SMACSS Categories:
 
----
-class: center, middle, bg-flat-light, left
-
-# Proses Pemesanan Menu Pada Aplikasi Apptizer
+SMACSS focuses on five categories for its rules:
 
-.center[![Default-aligned image](img/modern.png)]
+* Base
+* Layout
+* Module
+* State
+* Theme
 
-
 ---
-class: center, middle, bg-flat-light, left
 
-# Proses Manajemen dan Sinkronisasi Data Antara Server dan Client
+class: page
 
-.center[![Default-aligned image](img/data.png)]
+# SMACSS - Base
 
+__Base__ is used for defaults like `html`, `body`, `a`, `a:hover`. This includes your CSS resets and would often be in its own base CSS file or at the start of your main CSS.
 
 ---
-class: center, middle, bg-flat-light, left
+
+class: page
 
-# Fitur Aplikasi - Front End
+# SMACSS - Layout
 
-1. Lihat dan Pilih Menu
-2. Lihat Cart / Keranjang
-3. Checkout
-4. Lihat Billing
+__Layout__ divides a page into sections with elements like header, footer, and article. Often developers show layout elements by prefixing the class with `l-`.
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Fitur Aplikasi - Back End
+class: page
 
-1. Manajemen Item
-2. Manajemen Stock
-3. Manajemen Menu
-4. Manajemen Category
-5. Manajemen Order
-6. Manajemen Customer
-7. Reporting & Statistik
+# SMACSS - Module
 
+__Module__ is a reusable, modular element in the design. The SMACSS documentation sees modules as the majority of your elements and thus doesn’t require that you prefix them but you could do so if you choose.
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Identifikasi Aktor
+class: page
 
-1. Customer
-2. Waitress
-3. Kitchen Manager
-4. Administrator
-5. Owner
+# SMACSS - State
 
----
-class: center, middle, bg-flat-light, left
-
-# Identifikasi Aktor - Customer
+__State__ is used for the variations possible for each element (e.g. active, inactive, expanded, hidden). These are prefixed with `is-`, e.g. `is-active`, `is-inactive`, `is-expanded`, `is-hidden` or are via pseudo-classes such as `:hover` and `:focus` or media queries.
 
-.center[![Default-aligned image](img/uc-customer.png)]
-
 ---
-class: center, middle, bg-flat-light, left
-
-# Identifikasi Aktor - Waitress
-
-.center[![Default-aligned image](img/uc-waitress.png)]
 
----
-class: center, middle, bg-flat-light, left
+class: page
 
-# Identifikasi Aktor - Kitchen Manager
+# SMACSS - Theme
 
-.center[![Default-aligned image](img/uc-kitchen.png)]
+__Theme__ is similar to state but defines how modules and layouts will look. It is more applicable for larger sites with shared elements that look different throughout. You would add theme variations on a per page or per section basis.
 
 ---
-class: center, middle, bg-flat-light, left
-
-# Identifikasi Aktor - Administrator
 
-.center[![Default-aligned image](img/uc-admin.png)]
+class: page
 
----
-class: center, middle, bg-flat-light, left
+# SMACSS Advantage and Guidance
 
-# Identifikasi Aktor - Owner
+* Ease of demonstration and handover
+* Good for newcomers to a CSS methodology
+* Ease of reading
+* Scalable for all projects
+* You can use it with BEM!
 
-.center[![Default-aligned image](img/uc-owner.png)]
-
 ---
-class: center, middle, bg-flat-light, left
 
-# Analisa Komponen
+class: page-cover, center, middle
 
-1. Komponen Front End
-2. Komponen Back End
-3. Komponen Model
+# OOCSS (Object Oriented CSS)
 
 ---
-class: center, middle, bg-flat-light, left
-
-# Komponen Kelas Controller Front End
 
-.center[![Default-aligned image](img/front.png)]
+class: page
 
----
-class: center, middle, bg-flat-light, left
-
-# Komponen Kelas Controller Back End
+# OOCSS (Object Oriented CSS)
 
-.center[![Default-aligned image](img/back.png)]
+How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It’s an approach for writing CSS that’s fast, maintainable, and standards-based. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites.
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Komponen Kelas Model
-
-.center[![Default-aligned image](img/model.png)]
-
----
-class: center, middle, bg-flat-light, left
+class: page
 
-# Skema Komponen MVC
+# What is CSS Object
 
-.center[![Default-aligned image](img/mvc.png)]
+Basically, a CSS “object” is a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS, and possibly JavaScript. That object can then be reused throughout a site.
 
 ---
-class: center, middle, bg-flat-dark, section
 
-# Implementasi
+class: page
 
----
-class: center, middle, bg-flat-light, left
-
-# Screenshot Tampilan Front End
+# What is CSS Object (.cont)
 
-.center[![Default-aligned image](img/ss-front.png)]
+For instance, in the OOCSS framework the media object describes a content block containing a fixed-size media element (e.g. image or video) along with other variable-size content (e.g. text). Another example is the module object, which describes a generic content block with a required body area and optional header and footer areas.
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Screenshot Tampilan Back End
+class: page
 
-.center[![Default-aligned image](img/ss-back.png)]
-
----
-class: center, middle, bg-flat-dark, section
+# Two Main Principles of OOCSS
 
-# Kesimpulan dan Saran
+* Separate structure and skin
+* Separate container and content
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Kesimpulan #1
+class: page
 
-Perancangan aplikasi berbasis web baik sisi front end dan sisi back end telah dibuat sesuai spesifikasi kebutuhan yang telah dianalisa.
+# Principles #1 : Separate structure and skin
 
----
-class: center, middle, bg-flat-light, left
-
-# Kesimpulan #2
+This means to define repeating visual features (like background and border styles) as separate “skins” that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code.
 
-Metode pengembangan perangkat lunak menggunakan metode Prototype. Metode tersebut memudahkan dalam pengembangan aplikasi dengan jumlah page yang banyak dan kompleks sehingga bisa meminimalisir dan mengurangi waktu yang dibutuhkan dalam pengerjaan.
-
 ---
-class: center, middle, bg-flat-light, left
-
-# Kesimpulan #3
-
-Device yang digunakan dalam menampilkan aplikasi ini, yaitu desktop PC untuk back end dan tablet iPad untuk front end telah menampilkan aplikasi dengan baik dan sesuai harapan.
 
----
-class: center, middle, bg-flat-light, left
+class: page
 
-# Kesimpulan #4
+# Principles #1 : Separate structure and skin (.cont)
 
-Berdasarkan hasil pengujian fungsionalitas, implementasi dan dan fungsionalitas aplikasi Apptizer ini berjalan dengan baik dibuktikan dengan hasil pengujian validasi berupa pengujian Black Box yang memberikan nilai prosentase 100%
+Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with `class="media"`, and its components are named with `class="img"` (for the image/video component) and `class="bd"` (for the body/text component).
 
 ---
-class: center, middle, bg-flat-light, left
-
-# Kesimpulan #5
 
-Hasil UAT menunjukkan bahwa aplikasi ini dibutuhkan oleh pengguna, baik customer maupun restoran dan hasil uji coba oleh pengguna menunjukkan respon yang positif dan baik ditunjukkan dengan hasil kuesioner yang bagus.
+class: page
 
----
-class: center, middle, bg-flat-light, left
+# Principles #2 : Separate container and content
 
-# Kesimpulan #6
+Essentially, this means __rarely use location-dependent styles__. An object should look the same no matter where you put it. So instead of styling a specific `<h2>` with `.myObject h2 {...}`, create and apply a class that describes the `<h2>` in question, like `<h2 class="category">`.
 
-Aplikasi mampu berjalan dan berfungsi dalam memberikan solusi dan jawaban atas permasalahan yang sebelumnya timbul dalam manajemen dan pelayanan restoran.
-
 ---
-class: center, middle, bg-flat-light, left
-
-# Saran #1
 
-Membuat web service / API sehingga aplikasi client lebih mudah dalam melakukan komunikasi data dan tidak terbatas hanya pada platform / bahasa pemrograman tertentu saja
+class: page
 
----
-class: center, middle, bg-flat-light, left
-
-# Saran #2
+# Principles #2 : Separate container and content (.cont)
 
-Saat ini untuk aplikasi front end masih merupakan aplikasi web based yang mana performa mungkin sangat kurang dibandingkan dengan native mobile app, kedepannya diharapkan bisa dilakukan proses pembuatan aplikasi native mobile app untuk front end Apptizer.
+This gives you the assurance that:
 
+1. all unclassed `<h2>`s will look the same; 
+2. all elements with the category class (called a mixin) will look the same; and 
+3. you won’t need to create an override style for the case when you actually do want `.myObject h2` to look like the normal `<h2>`.
 
 ---
-class: center, middle, bg-flat-light, left
 
-# Saran #3
+class: page
 
-Menambahkan sistem cerdas / data mining di dalamnya sehingga aplikasi bisa lebih intuitif dan benar benar memenuhi kebutuhan pengguna.
+# Vendor Spesific Standard CSS Guidelines
 
----
-class: center, middle, bg-flat-light, left
+* Google : https://google.github.io/styleguide/htmlcssguide.xml
+* Wordpress : https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/
+* Github : http://primercss.io/
 
-# Saran #4
+--- 
 
-Memasukkan beberapa fitur tambahan sehingga lebih sempurna. Beberapa fitur seperti pembayaran, dan beberapa modul informasi yang lebih informatif terkait modul modul yang ada masih belum dikembangkan.
-
----
-class: center, middle, bg-flat-dark, section
+class: page-cover
 
 # Terima Kasih
+
+---
 
 
     </textarea>

@@ -1,0 +1,66 @@
+* {
+    color: #444;
+}
+
+
+
+ol, ul {
+    padding: 0;
+    margin: 0;
+}
+
+ol {
+    margin-left: 35px;
+}
+
+ul {
+    margin-left: 24px;
+}
+
+ol li,
+ul li,
+p {
+    font-family: "Helvetica Neue";
+    line-height: 36px;
+    font-size: 24px;
+    font-weight: 200;
+    color: #888;
+}
+
+h1 {
+    font-family: "Helvetica Neue";
+}
+
+.page h1 {
+    color: #E14242;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 48px 0px;
+}
+
+.page-cover {
+    background: #1A2F4B;
+}
+
+.page-cover h1 {
+    color: white;
+}
+
+
+.remark-code, .remark-inline-code { 
+    font-family: 'Source Code Pro'; 
+    font-weight: 100;
+}
+
+.remark-code .class,
+.remark-code .number {
+    color: white;
+}
+
+.cover {
+    background: black;
+    background-image: url(../img/cover.jpg)
+}
+.cover h1 {
+    color: white;
+}
