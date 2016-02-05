@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Pengenalan CSS Prepocessors</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta property="og:description" content="CSS methodologies are formal, documented systems for authoring CSS in a way that allows us to develop, maintain and scale the front-end as a set of small, isolated modules">
+    <meta property="og:image" content="http://slide.yuripertamax.me/introduction-to-css-methodologies/dist/img/cover.png">
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, cover
+background-image: url(img/cover.jpg)
+
+Malang Front End Developer Group
+
+# Pengenalan CSS Prepocessors
+
+oleh Yuri Pratama - @yuripertamax
+
+---
+
+class: page
+
+# Yuri Pratama
+
+* UI/UX Designer PT Jagad Indonesia.
+* Kadang Backend Developer
+* Kadang Frontend Developer
+* Remote Worker
+
+
+---
+
+class: page
+
+# Agenda
+
+1. Apa itu CSS Preprocessors?
+2. Macam-macam CSS Preprocessors
+3. Mengapa CSS Preprocessors?
+4. Kelebihan CSS Preprocessors
+5. Fitur Umum CSS Preprocessors
+6. Kekurangan CSS Preprocessors
+
+---
+
+class: page
+
+# Sebelum kita mulai
+
+* Diasumsikan teman-teman telah mengetahui apa itu CSS
+* Mengetahui sebagian besar sintaks CSS 
+* Slide ini dapat dilihat di [http://slide.yuripertamax.me/pengenalan-css-processors](http://slide.yuripertamax.me/pengenalan-css-processors)
+
+---
+
+class: page-cover, middle, center
+
+# Apa itu CSS Preprocessors?
+
+---
+
+class: page
+
+# Apa itu CSS Preprocessors?
+
+* Tools
+* Bahasa
+* Ekstensi
+* Model
+* Fitur
+
+---
+
+class: page
+
+# Apa itu CSS Preprocessors ?
+
+* Sebuah tools atau bahasa atau model penulisan baru untuk __CSS__ dimana developer / programmer dapat menggunakan fitur fitur tambahan yang tidak ada pada penulisan CSS biasa.
+
+* Hanya merupakan __Pre__ -processors / alat bantu sehingga bahasa ini harus dicompile sehingga menjadi bahasa CSS biasa yang dipahami oleh browser, dan siap digunakan di server produksi.
+
+---
+
+class: page-cover, middle, center
+
+# Mengapa Menggunakan CSS Preprocessors?
+
+---
+
+class: page-cover, middle, center, red
+
+# Karena CSS itu lemah
+
+---
+
+class: page
+
+# Kelemahan CSS
+
+* Tidak adanya variabel
+* Tidak memiliki ekspresi
+* Repetisi yang cukup banyak
+* Susah untuk maintain
+* Tidak fleksibel
+* Basah
+
+---
+
+class: page-cover, middle, center
+
+# Kelebihan CSS Preprocessors
+
+---
+
+class: page
+
+# Kelebihan CSS Preprocessors
+
+* DRY - Mengurangi redundansi
+* Modularisasi
+* Hemat Waktu, Efisien, dan fleksible
+* Kaya fitur: Variabel! Nesting! Mix-ins! Built-in! Math! Function! (SASS only), and Expressions!
+* Mudah di konfigurasi dan digunakan
+* Kode lebih bersih dan simpel
+* Mudah di maintain, dan dirubah
+
+---
+
+class: page-cover, middle, center
+
+# Macam-macam CSS Preprocessors
+
+---
+
+class: page
+
+# Macam-macam CSS Preprocessors
+
+* LESS (Javascript)
+* SASS / SCSS (Ruby)
+* Stylus (Node.js)
+
+---
+
+class: cover, middle, center
+background-image: url(img/less.jpg)
+<!-- # LESS -->
+
+---
+
+class: page
+
+# LESS 
+
+* lesscss.org
+* Diluncurkan tahun 2009 / Alexis Sellier, Dmitry Fadeyev
+* Berbasis javascript
+* Bootstrap
+* Dukungan banyak forum dan lebih banyak digunakan
+* Fitur tidak terlalu banyak, tapi sudah cukup untuk kebutuhan minimal
+* Dokumentasi lengkap dan rapi
+
+---
+
+class: page
+
+# Gaya Penulisan LESS
+
+```
+.border-radius {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+```
+
+```
+header {
+    .border-radius;
+}
+```
+
+---
+
+class: cover, middle, center
+background-image: url(img/sass.jpg)
+
+---
+
+class: page
+
+# SASS / SCSS
+
+* sass-lang.com
+* Didirikan tahun 2006 / Natalie Weizenbaum, Chris Eppstein
+* Berbasis Ruby
+* Compass
+* Cenderung digunakan oleh designer
+* Sintaks yang _friendly_
+* Fitur lebih banyak
+* Dokumentasi lengkap namun tidak rapi
+
+---
+
+class: page
+
+# Gaya Penulisan SCSS
+
+```
+$link-color: blue;  /* create variable for all links */
+$padding: 20px;  /* create variable for padding */
+
+nav {
+  padding: $padding;
+}
+.sidebar a {
+  color: $link-color;
+}
+```
+
+---
+
+class: page
+
+# Gaya Penulisan SASS
+
+```
+.headline
+    color: blue
+    font-size: 2em
+```
+
+---
+
+class: page-cover, center, middle
+
+# Stylus
+
+---
+
+class: page
+
+# Gaya Penulisan Stylus
+
+```
+h1
+    font 2em Helvetica, Arial, sans-serif
+```
+
+---
+
+class: page-cover, middle, center
+
+# Fitur Utama
+
+---
+
+class: page
+
+# Fitur Umum CSS Preprocessors
+
+* Variable
+* Nesting
+* Built-ins
+* Mix-ins
+* Math
+* Functions! (not in LESS)
+* Expressions (If, If-else, Loops)
+
+* Dan lainnya
+
+---
+
+class: page-cover, middle, center
+
+# Variable Ready!
+
+---
+
+class: page
+
+# Repetisi value?
+
+```
+a {
+    color: #4575D4;
+}
+
+h1 {
+    color: #4575D4;
+}
+```
+
+---
+
+class: page
+
+# Contoh Penggunaan Variabel
+
+```
+@main-color: #4575D4;
+
+a {
+    color: @main-color;  
+}
+
+h1 {
+    color: @main-color;
+}
+```
+
+---
+
+class: page-cover, center, middle
+
+# Nested Code Support!
+
+---
+
+class: page
+
+# Repetisi Penulisan (lagi) ?
+
+```
+ul {
+    display: block;
+}
+
+ul li {
+    display: inline;
+}
+
+ul li a {
+    color: red;
+}
+
+ul li a span {
+    color: blue;
+}
+```
+
+---
+
+class: page
+
+# Contoh penggunaan nesting
+
+```
+ul {
+    display: block;
+    li {
+        display: inline;
+        a {
+            color: red;
+            span {
+                color: blue;
+            }
+        }
+    }
+}
+```
+
+---
+
+class: page-cover, middle, center
+
+# Tons of Built-ins!
+
+---
+
+class: page
+
+# Mendefiniskan value (warna, angka) manual ?
+
+```
+p {
+    color: #009a00;
+    background-color: #cccc00;
+    font-size: 13px;
+    line-height: 12px;
+}
+```
+
+---
+
+class: page
+
+# Contoh built-in
+
+```
+p {
+    color: lighten(green, 5%);
+    background-color: darken(yellow, 10%);
+    font-size: ceil(12.78);
+    line-height: floor(12.78);
+}
+```
+
+---
+
+class: page-cover, middle, center
+
+# Mixins
+
+---
+
+class: page
+
+# Contoh penggunaan mixins
+
+```
+@mixin padding ($param: 1em) { // $param has a default value of 1em
+  padding: $param;
+}
+
+@mixin border ($direction: bottom, $weight: 1px, $style: solid, $color: black) {
+    border-#{$direction}: $weight $style $color; // String interpolation
+}
+
+.box2 {
+    @include padding; // padding: 1em;
+    background: blue;
+}
+
+.box1 {
+    @include padding(5em); // padding: 5em;
+    @include border(left, 10px, dotted, red); // border-left: 10px dotted red;
+    background: green;
+}
+``` 
+
+---
+
+class: page
+
+# Contoh output penggunaan mixins
+
+```
+.box2 {
+    padding: 1em;
+    background: blue;
+}
+.box1 {
+    padding: 5em;
+    border-left: 10px dotted red;
+    background: green;
+}
+```
+
+---
+
+class: page-cover, middle, center
+
+# Math Functions!
+
+---
+
+class: page
+
+# Contoh penggunaan fungsi matematika
+
+```
+p {
+    @width: 30em;
+
+    font: 30px/2px; // Normal CSS, no division
+    width: @width/2; // Using a variable causes division
+    height: (500px/2); // Uses parentheses, does division
+    margin-left: 10px + 10px/5px; // Uses +, does division
+}
+```
+
+---
+
+class: page
+
+# Contoh output penggunaan fungsi matematika
+
+```
+p {
+    font: 30px/2px;
+    width: 15em;
+    height: 250px;
+    margin-left: 12px;
+}
+```
+
+---
+
+class: page-cover, middle, center
+
+# Functions (SASS ONLY!)
+
+---
+
+class: page
+
+# Contoh penggunaan fungsi
+
+```
+@function add-sizes($size1, $size2){
+    @return $size1 + $size2
+}
+p {
+    font-size: add-sizes(3em, 10em);
+}
+```
+
+---
+
+class: page
+
+# Contoh output penggunaan fungsi
+
+```
+p {
+    font-size: 13em;
+}
+```
+
+---
+
+class: page-cover, middle, center
+
+# Conditional & Expressions!
+
+---
+
+class: page
+
+# Contoh penggunaan kondisional state
+
+```
+$size: medium;
+
+p {
+    @if $size == xsmall {
+        font-size: 8px;
+    } @else if $size == small {
+        font-size: 10px;
+    } @else if $size == large {
+        font-size: 24px;
+    } @else if $size == xlarge {
+        font-size: 32px;
+    } @else {
+        font-size: 16px;
+    }
+}
+```
+
+---
+
+class: page
+
+# Contoh output penggunaan kondisional state
+
+```
+p {
+    font-size: 16px;
+}
+```
+
+---
+
+class: page
+
+# Contoh penggunaan for-loops
+
+```
+@for $i from 1 through 5 {
+  li.item-#{$i} { width: 1.5em * $i; }
+}
+```
+
+---
+
+class: page
+
+# Contoh output penggunaan for-loops
+
+```
+li.item-1 {
+    width: 1.5em;
+}
+li.item-2 {
+    width: 3em;
+}
+li.item-3 {
+    width: 4.5em;
+}
+li.item-4 {
+    width: 6em;
+}
+li.item-5 {
+    width: 7.5em;
+}
+```
+
+---
+
+class: page
+
+# Contoh penggunaan each-loops
+
+```
+@each $employee in Pete, Mike, Martin, Yann {
+    li.employee-#{$employee} {
+        background-image: url('/images/photos/#{$employee}.jpg');
+    }
+}
+```
+
+---
+
+class: page
+
+# Contoh output penggunaan each-loops
+
+```
+li.employee-Pete {
+    background-image: url('/images/photos/Pete.jpg');
+}
+li.employee-Mike {
+    background-image: url('/images/photos/Mike.jpg');
+}
+li.employee-Martin {
+    background-image: url('/images/photos/Martin.jpg');
+}
+li.employee-Yann {
+    background-image: url('/images/photos/Yann.jpg');
+}
+```
+
+---
+
+class: page-cover, middle, center
+
+# Cara kerja CSS Preprocessors?
+
+---
+
+class: page-cover, middle, center
+
+# Tulis kode .less / .sass Anda
+
+---
+
+class: page-cover, middle, center
+
+# ..Compile
+
+---
+
+class: page-cover, middle, center
+
+# file .css!
+
+---
+
+class: page-cover, middle, center, red
+
+# Kelemahan CSS Processors
+
+---
+
+class: page
+
+# Kelemahan CSS Preprocessors
+
+1. Butuh tools tambahan untuk compile ( +minify, dll)
+2. Investasi waktu belajar sintaks khusus less/sass
+3. (isi sendiri)
+
+---
+
+class: page-cover, center, middle
+
+# Rutam Nuwus
+
+
+    </textarea>
+    <script src="js/remark.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="js/remark.language.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark'
+        }) ;
+    </script>
+  </body>
+</html>

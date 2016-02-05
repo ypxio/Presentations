@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,400italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500);
+
+* {
+    color: #444;
+}
+
+
+ol, ul {
+    padding: 0;
+    margin: 0;
+}
+
+ol {
+    margin-left: 35px;
+}
+
+ul {
+    margin-left: 24px;
+}
+
+ol li,
+ul li,
+p {
+    font-family: "Roboto";
+    line-height: 36px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #888;
+}
+
+h1 {
+    font-family: "Roboto";
+}
+
+.page h1 {
+    color: #E14242;
+    font-size: 36px;
+    font-weight: 900;
+    margin: 48px 0px;
+}
+
+.page-cover {
+    background: #1A2F4B;
+}
+
+.page-cover.red {
+  background: red;
+}
+
+.page-cover h1 {
+    color: white;
+}
+
+
+.remark-code, .remark-inline-code { 
+    font-family: 'Source Code Pro'; 
+    font-weight: 400;
+}
+
+.remark-code .class,
+.remark-code .number {
+    color: white;
+}
+
+.cover {
+    background: black;
+    background-size: cover !important;    
+    background-image: url(../img/cover.jpg);
+}
+/*.remark-slide-content.cover {
+    background: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/cover.jpg);
+    position: relative;
+}*/
+.cover h1 {
+    color: white;
+}
+
+.left-column {
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 2em;
+}
+
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right ~ p {
+  clear: both;
+}
+
+
+
